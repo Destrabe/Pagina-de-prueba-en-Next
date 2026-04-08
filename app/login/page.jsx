@@ -1,7 +1,33 @@
+"use client";
+
 import "./login.css";
 import Image from "next/image";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { loginUser } from "@/app/login/authService";
 
 function Login() {
+  const router = useRouter();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const user = await loginUser(email, password);
+
+      console.log("Usuario:", user);
+
+      alert("Login exitoso ✅");
+
+      //router.push("/");
+    } catch (error) {
+      alert("Credenciales incorrectas ❌");
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="back-container">
@@ -23,9 +49,18 @@ function Login() {
       <div className="login-card">
         <h2>Login</h2>
         <h3>Ingresa tus credenciales</h3>
-        <form className="login-form">
-          <input type="email" placeholder="Correo" />
-          <input type="password" placeholder="Password" />
+
+        <form className="login-form" onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Correo"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <a href="#">¿Olvidaste tu contraseña?</a>
           <button type="submit">Login</button>
         </form>
