@@ -20,9 +20,9 @@ function Header() {
         </li>
       </ul>
 
-      <Link href="/login">
+      <a href="/login">
         <button>Login</button>
-      </Link>
+      </a>
     </header>
   );
 }
