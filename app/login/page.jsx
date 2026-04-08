@@ -24,7 +24,7 @@ function Login() {
         <h2>Login</h2>
         <h3>Ingresa tus credenciales</h3>
         <form className="login-form">
-          <input type="text" placeholder="Usuario" />
+          <input type="email" placeholder="Correo" />
           <input type="password" placeholder="Password" />
           <a href="#">¿Olvidaste tu contraseña?</a>
           <button type="submit">Login</button>
