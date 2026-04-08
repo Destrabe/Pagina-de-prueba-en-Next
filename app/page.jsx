@@ -3,7 +3,7 @@ import Footer from "@/components/footer/footer";
 
 function HomePage() {
   return (
-    <div className="container">
+    <div className="order">
       <Header />
       <main>
         <h1>Hello World</h1>
