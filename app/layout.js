@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <TitleChanger />
         {children}
+        <Analytics />
       </body>
     </html>
   );
