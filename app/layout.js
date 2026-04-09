@@ -1,4 +1,5 @@
 import TitleChanger from "@/components/titleChanger";
+import { Analytics } from "@vercel/analytics/next";
 import "./global.css";
 
 export const metadata = {
