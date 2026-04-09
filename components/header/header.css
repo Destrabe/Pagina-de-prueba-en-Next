@@ -1,44 +1,40 @@
-header {
-  position: relative;
+.header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 32px;
   height: 60px;
   background-color: #0f172a;
 }
 
 /* izquierda */
-header p {
+.left {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
   color: #fff;
+  line-height: 1;
 }
 
 /* centro REAL */
-header ul {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.center {
   display: flex;
   gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-a {
-  font-size: 19px;
+.center a {
+  font-size: 18px;
   color: #fff;
   text-decoration: none;
+  transition: 0.2s;
+}
+
+.center a:hover {
+  color: #38bdf8;
 }
 
 /* derecha */
-header a:last-child {
-  margin-left: auto;
-}
-
-button {
+.right button {
   padding: 8px 20px;
   font-size: 15px;
   background-color: #38bdf8;
@@ -49,6 +45,7 @@ button {
   font-weight: bold;
   transition: 0.3s;
 }
-button:hover {
+
+.right button:hover {
   background-color: #0ea5e9;
 }

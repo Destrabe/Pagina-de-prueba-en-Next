@@ -3,26 +3,21 @@ import "./header.css";
 
 function Header() {
   return (
-    <header>
-      <p>Prueba</p>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/page01">Pagina 01</Link>
-        </li>
-        <li>
-          <Link href="/page02">Pagina 02</Link>
-        </li>
-        <li>
-          <Link href="/page03">Pagina 03</Link>
-        </li>
-      </ul>
+    <header className="header">
+      <div className="left">Prueba</div>
 
-      <a href="/login">
-        <button>Login</button>
-      </a>
+      <nav className="center">
+        <Link href="/">Home</Link>
+        <Link href="/page01">Pagina 01</Link>
+        <Link href="/page02">Pagina 02</Link>
+        <Link href="/page03">Pagina 03</Link>
+      </nav>
+
+      <div className="right">
+        <a href="/login">
+          <button>Login</button>
+        </a>
+      </div>
     </header>
   );
 }
