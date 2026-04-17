@@ -3,11 +3,12 @@
 import "./login.css";
 import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 import { loginUser } from "@/app/login/authService";
+import Link from "next/link";
 
 function Login() {
-  const router = useRouter();
+  //const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,7 +32,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="back-container">
-        <a href="/" className="back-btn">
+        <Link href="/" className="back-btn">
           <div className="btn-green">
             <Image
               src="/arrow-left.svg"
@@ -43,7 +44,7 @@ function Login() {
             />
           </div>
           <span className="text">Volver</span>
-        </a>
+        </Link>
       </div>
 
       <div className="login-card">

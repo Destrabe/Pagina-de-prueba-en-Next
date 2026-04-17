@@ -1,51 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 32px;
-  height: 60px;
-  background-color: #0f172a;
+  height: 101px;
+  background-color: #0b0b0b;
 }
 
 /* izquierda */
-.left {
+.header .left {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
   margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
-/* centro REAL */
-.center {
+.header .nexora {
+  color: #fff;
+}
+.header .point-nexora {
+  color: #500fe9;
+}
+
+/* centro */
+.header .center {
   display: flex;
+  margin-left: 940px;
   gap: 32px;
 }
 
-.center a {
-  font-size: 18px;
+.header .center a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
   color: #fff;
   text-decoration: none;
   transition: 0.2s;
 }
 
-.center a:hover {
-  color: #38bdf8;
+.header .center a:hover {
+  color: #b39cea;
+}
+
+/* separador */
+.header-separator {
+  margin-left: 36px;
+  margin-right: 24px;
+  width: 1px;
+  height: 24px;
+  background: #fff;
 }
 
 /* derecha */
-.right button {
-  padding: 8px 20px;
-  font-size: 15px;
-  background-color: #38bdf8;
-  color: #0f172a;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+.header .right {
+  display: flex;
+  gap: 17px;
+  margin-left: auto;
 }
 
-.right button:hover {
-  background-color: #0ea5e9;
+.login-btn,
+.register-btn {
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.header .login-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header .login-btn:hover {
+  background-color: #6c63ff;
+}
+
+.header .register-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #6c63ff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header .register-btn:hover {
+  opacity: 0.9;
 }
