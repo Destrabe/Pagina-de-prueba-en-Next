@@ -4,7 +4,7 @@ import "./login.css";
 import Image from "next/image";
 import { useState } from "react";
 //import { useRouter } from "next/navigation";
-import { loginUser } from "@/app/login/authService";
+import { loginUser } from "@/app/authService";
 import Link from "next/link";
 
 function Login() {
